@@ -192,9 +192,9 @@ footer a {
         padding-left: 50px;
     }
 
-/*     nav ul li a {
-        font-size: 35px;
-    } */
+    nav ul li a {
+        font-size: 28px;
+    }
 
     .legenda h1 {
         height: 36%;
@@ -235,7 +235,7 @@ footer a {
     }
 
     .home li {
-        margin-top: 40px;
+        margin-top: 11px;
     }
 
     #check:checked~.home {
