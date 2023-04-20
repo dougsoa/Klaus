@@ -182,13 +182,14 @@ footer a {
     display: block;
     width: 4rem;
     height: auto;
+    margin-top: 20px;
 }
 
 .close-icon {
     display: none;
     width: 3rem;
     height: auto;
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 952px) {
