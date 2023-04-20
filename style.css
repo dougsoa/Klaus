@@ -8,14 +8,25 @@
     box-sizing: border-box;
 }
 
+html, 
+body {
+    scroll-behavior: smooth;
+}
+
 nav {
     background: #00000000;
     height: 80px;
+    max-width: 2000px;
     width: 100%;
     position: fixed;
     z-index: 9000;
-    padding: 10px;
+    padding: -5px 8px;
     margin: auto;
+}
+
+ul.home {
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .site-title {
@@ -29,6 +40,7 @@ nav {
     list-style: none;
     margin: auto;
     text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
+    cursor: pointer;
 }
 
 #menu.ativo {
@@ -67,13 +79,22 @@ nav ul li a:hover {
     font-family: 'norican';
     text-shadow: black 0.1em 0.1em 0.2em;
     color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 8vw;
+    margin: auto;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+}
+
+.legenda {
     position: absolute;
     top: 40%;
-    left: 40%;
-    text-align: center;
-    padding: 10px;
-    font-size: 120px;
-    margin: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .container img {
@@ -129,21 +150,17 @@ footer a {
     text-decoration: none;
 }
 
-.back-to-top {
+#top {
     font-family: 'Courier New', Courier, monospace;
     background: #000000;
     color: white;
     position: fixed;
-    right: 0rem;
+    right: 1rem;
     bottom: 1rem;
-    padding: 0.5rem;
-    clip-path: circle();
-}
-
-.back-to-top.show {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
+    padding: 0.9rem;
+    clip-path: circle(50% at 50% 50%);
+    text-decoration: none;
+    display: flex;
 }
 
 .checkbtn {
@@ -161,14 +178,22 @@ footer a {
     display: none;
 }
 
-@media (max-width: 952px) {
+.menu-icon {
+    display: block;
+}
+
+.close-icon {
+    display: none;
+}
+
+@media screen and (max-width: 952px) {
     label.logo {
         font-size: 30px;
         padding-left: 50px;
     }
 
     nav ul li a {
-        font-size: 16px;
+        font-size: 35px;
     }
 
     .legenda h1 {
@@ -178,7 +203,8 @@ footer a {
         text-shadow: black 0.1em 0.1em 0.2em;
         color: white;
         margin: auto;
-        left: 34px;
+        font-size: 70px;
+
     }
 
     .container img {
@@ -189,9 +215,52 @@ footer a {
         object-fit: cover;
         opacity: 0.95;
     }
+
+    .checkbtn {
+        display: block;
+    }
+
+    .home {
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        left: -100%;
+        transition: all 0.5s;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .home li {
+        margin-top: 40px;
+    }
+
+    #check:checked~.home {
+        left: 0;
+    }
+
+    .fa-times {
+        display: none;
+    }
+
+    #check:checked~.checkbtn .fa-bars {
+        display: none;
+    }
+
+    #check:checked~.checkbtn .fa-times {
+        display: block;
+    }
+
+    .site-title{
+        margin: 21px;
+    }
+
 }
 
-@media (max-width: 858px) {
+@media screen and (max-width: 858px) {
     .checkbtn {
         display: block;
     }
@@ -201,7 +270,7 @@ footer a {
         width: 100%;
         height: 100%;
         background: #000000;
-        top: 80px;
+        top: 77px;
         left: -100%;
         text-align: center;
         transition: all .5s;
@@ -209,12 +278,6 @@ footer a {
 
     nav ul li {
         display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-
-    nav ul li a {
-        font-size: 20px;
     }
 
     .legenda h1 {
@@ -224,58 +287,171 @@ footer a {
         text-shadow: black 0.1em 0.1em 0.2em;
         color: white;
         margin: auto;
-        left: 104px;
-        top: 336px;
     }
 
-    #check:checked~ul {
+    .checkbtn {
+        display: block;
+    }
+
+    .home {
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        left: -100%;
+        transition: all 0.5s;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .home li {
+        margin-top: 40px;
+    }
+
+    #check:checked~.home {
         left: 0;
     }
 
-    h2 {
-        font-family: circe;
-        font-size: 28px;
-        font-weight: 300;
-        text-transform: none;
-        font-style: normal;
-        letter-spacing: 0em;
-        text-decoration: none;
-        line-height: 1.8em;
+    .fa-times {
+        display: none;
     }
 
-    main {
-        background-color: white;
-        border-radius: 20px;
-        width: 90%;
-        padding: 32px 5%;
-        min-height: 90vh;
-        max-width: 860px;
-        margin: 0 auto;
+    #check:checked~.checkbtn .fa-bars {
+        display: none;
     }
 
+    #check:checked~.checkbtn .fa-times {
+        display: block;
+    }
 }
 
-@media (max-width: 412px) {
+h2 {
+    font-family: circe;
+    font-size: 28px;
+    font-weight: 300;
+    text-transform: none;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-decoration: none;
+    line-height: 1.8em;
+}
+
+main {
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    padding: 32px 5%;
+    min-height: 90vh;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .home {
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        left: -100%;
+        transition: all 0.5s;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .home li {
+        margin-top: 40px;
+    }
+
+    .fa-times {
+        display: none;
+    }
+
+    #check:checked~.checkbtn .fa-bars {
+        display: none;
+    }
+
+    #check:checked~.checkbtn .fa-times {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 412px) {
     .legenda h1 {
         left: 49px;
         top: 276px;
     }
+
     .checkbtn {
         margin-right: 10px;
     }
 }
 
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
     .legenda h1 {
         left: 31px;
         top: 276px;
     }
+
     .checkbtn {
         margin-right: 10px;
     }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .close-icon {
+        display: block;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    #menu ul {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    #menu ul li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #555;
+    }
+
+    #menu ul li a {
+        display: block;
+        font-size: 20px;
+        line-height: 50px;
+        padding: 0 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #check:checked~ul {
+        display: block;
+    }
 }
 
-@media (max-width: 280px) {
+@media screen and (max-width: 280px) {
     .legenda h1 {
         left: 31px;
         top: 276px;
@@ -289,4 +465,21 @@ footer a {
     .checkbtn {
         margin-right: 10px;
     }
+}
+
+/* PAGINA CONTATOS */
+
+.menu_contato {
+    background: #000000;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 9000;
+    padding: 10px;
+    margin: auto;
+}
+
+.image_contato img {
+    width: 18%;
+
 }

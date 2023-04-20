@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Klaus Art</title>
     <link rel="shortcut icon" href="/Klaus_Art/imagens/favicon_io/android-chrome-512x512.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -16,22 +16,23 @@
         <nav id="menu">
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
-                <i class="fa-light fa-brush">Menu</i>
+                <i class="fas fa-bars menu-icon">Menu</i>
+                <i class="fas fa-times close-icon">X</i>
             </label>
             <label class="site-title">Klaus Art.</label>
             <ul class="home">
-                <li class="site-title"><a href="#home"> Home </a></li>
-                <li class="site-title"><a href="#"> Projetos </a></li>
-                <li class="site-title"><a href="#"> Galeria </a></li>
-                <li class="site-title"><a href="#"> Loja </a></li>
-                <li class="site-title"><a href="#"> Contato </a></li>
+                <li class="site-title"><a onclick="index()"> Home </a></li>
+                <li class="site-title"><a onclick="projetos()"> Projetos </a></li>
+                <li class="site-title"><a onclick="galeria()"> Galeria </a></li>
+                <li class="site-title"><a onclick="loja()"> Loja </a></li>
+                <li class="site-title"><a onclick="contato()"> Contato </a></li>
             </ul>
         </nav>
     </header>
 
     <section>
         <div class="container">
-            <img src="/Klaus_Art/imagens/home/cow2.jpg" alt="">
+            <img src="/Klaus_Art/imagens/home/art8.png" alt="">
             <div class="legenda">
                 <h1>Klaus Art.</h1>
             </div>
@@ -39,65 +40,89 @@
     </section>
 
     <main>
-        <h2>Binging with Babish is a cooking show dedicated to discovering what the delectable (and occasionally
-            horrible) foods from fiction actually taste like.</h2>
-        <h2>Título 1</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis consequatur!
-            Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto porro
-            aliquam?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat omnis,
-            dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
-            eveniet?</p>
-        <h2>Título 2</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis consequatur!
-            Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto porro
-            aliquam?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat omnis,
-            dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
-            eveniet?</p>
-        <h2>Título 3</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis consequatur!
-            Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto porro
-            aliquam?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat omnis,
-            dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
-            eveniet?</p>
+        <article>
+            <h2>Binging with Babish is a cooking show dedicated to discovering what the delectable (and occasionally
+                horrible) foods from fiction actually taste like.</h2>
+            <h2>Título 1</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis
+                consequatur!
+                Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto
+                porro
+                aliquam?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat
+                omnis,
+                dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
+                eveniet?</p>
+            <h2>Título 2</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis
+                consequatur!
+                Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto
+                porro
+                aliquam?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat
+                omnis,
+                dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
+                eveniet?</p>
+            <h2>Título 3</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis
+                consequatur!
+                Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto
+                porro
+                aliquam?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat
+                omnis,
+                dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
+                eveniet?</p>
+        </article>
+
     </main>
 
     <main>
-        <h2>Binging with Babish is a cooking show dedicated to discovering what the delectable (and occasionally
-            horrible) foods from fiction actually taste like.</h2>
-        <h2>Título 1</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis consequatur!
-            Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto porro
-            aliquam?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat omnis,
-            dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
-            eveniet?</p>
-        <h2>Título 2</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis consequatur!
-            Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto porro
-            aliquam?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat omnis,
-            dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
-            eveniet?</p>
-        <h2>Título 3</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis consequatur!
-            Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto porro
-            aliquam?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat omnis,
-            dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
-            eveniet?</p>
+        <article>
+            <h2>Binging with Babish is a cooking show dedicated to discovering what the delectable (and occasionally
+                horrible) foods from fiction actually taste like.</h2>
+            <h2>Título 1</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis
+                consequatur!
+                Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto
+                porro
+                aliquam?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat
+                omnis,
+                dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
+                eveniet?</p>
+            <h2>Título 2</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis
+                consequatur!
+                Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto
+                porro
+                aliquam?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat
+                omnis,
+                dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
+                eveniet?</p>
+            <h2>Título 3</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia animi beatae hic perferendis
+                consequatur!
+                Nobis officiis, laborum sed, vero fuga quae quasi non voluptate soluta provident fugiat, architecto
+                porro
+                aliquam?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat quam in qui, quaerat
+                omnis,
+                dicta tenetur quod minima distinctio doloribus sunt odio magnam blanditiis aliquid sit ullam tempore
+                eveniet?</p>
+        </article>
     </main>
 
     <section>
         <footer>
-            Desenvolvido por <a href="#home"><span>Douglas Oliveira</span></a> - 2023. Todos os direitos reservados
+            Desenvolvido por <a href="#home"><span>Douglas S. Oliveira</span></a> - 2023. Todos os direitos reservados
         </footer>
 
     </section>
-    <div class="container">
-        <a href="#home" class="back-to-top">Topo<i class="icon-arrow-up"></i></a>
+
+    <div id="top">
+        <i class="arrow up">Up</i>
     </div>
 
 </body>
