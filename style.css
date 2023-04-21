@@ -243,7 +243,7 @@ footer a {
     }
 
     .home li {
-        margin-top: 11px;
+        margin-top: 2px;
     }
 
     #check:checked~.home {
@@ -316,7 +316,7 @@ footer a {
     }
 
     .home li {
-        margin-top: 40px;
+        margin-top: 2px;
     }
 
     #check:checked~.home {
@@ -377,7 +377,7 @@ main {
     }
 
     .home li {
-        margin-top: 40px;
+        margin-top: 2px;
     }
 
     .fa-times {
@@ -399,6 +399,10 @@ main {
         top: 276px;
     }
 
+    .home li {
+        margin-top: 2px;
+    }
+
     .checkbtn {
         margin-right: 10px;
     }
@@ -412,6 +416,10 @@ main {
     .legenda h1 {
         left: 31px;
         top: 276px;
+    }
+
+    .home li {
+        margin-top: 2px;
     }
 
     nav {
@@ -492,6 +500,10 @@ main {
 
     nav {
         background: black;
+    }
+
+    .home li {
+        margin-top: 2px;
     }
 
     .site-title {
