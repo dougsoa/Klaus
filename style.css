@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-html, 
+html,
 body {
     scroll-behavior: smooth;
 }
@@ -31,7 +31,7 @@ ul.home {
 
 .site-title {
     color: #72d1d1;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'norican';
     font-size: 35px;
     line-height: 80px;
     padding: 0 20px;
@@ -262,7 +262,7 @@ footer a {
         display: block;
     }
 
-    .site-title{
+    .site-title {
         margin: 21px;
     }
 
@@ -402,12 +402,20 @@ main {
     .checkbtn {
         margin-right: 10px;
     }
+
+    nav {
+        background: black;
+    }
 }
 
 @media screen and (max-width: 360px) {
     .legenda h1 {
         left: 31px;
         top: 276px;
+    }
+
+    nav {
+        background: black;
     }
 
     nav ul li a {
@@ -465,11 +473,11 @@ main {
     .checkbtn {
         display: block;
     }
-    
+
     .menu-icon {
         margin-top: 10px;
     }
-    
+
     .close-icon {
         margin-top: 10px;
     }
@@ -480,6 +488,10 @@ main {
         left: 31px;
         top: 276px;
         font-size: 82px;
+    }
+
+    nav {
+        background: black;
     }
 
     .site-title {
@@ -493,11 +505,11 @@ main {
     .checkbtn {
         display: block;
     }
-    
+
     .menu-icon {
         margin-top: 10px;
     }
-    
+
     .close-icon {
         margin-top: 10px;
     }
