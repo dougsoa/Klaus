@@ -68,6 +68,7 @@ nav ul li a {
     text-decoration: none;
     line-height: 1em;
     padding: 1px 1px;
+    font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 nav ul li a:hover {
@@ -120,16 +121,19 @@ h1 {
     color: #000000;
     text-align: center;
     font-family: 'circe';
+    font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 h2 {
     color: #000000;
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.8em;
+    font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 p {
     text-align: justify;
+    font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 footer {
@@ -148,6 +152,7 @@ footer span {
 
 footer a {
     text-decoration: none;
+    font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 #top {
@@ -182,7 +187,7 @@ footer a {
     display: block;
     width: 4rem;
     height: auto;
-    margin-top: 20px;
+    margin-top: auto;
 }
 
 .close-icon {
@@ -236,7 +241,7 @@ footer a {
         top: 80px;
         left: -100%;
         transition: all 0.5s;
-        background-color: #333;
+        background-color: #000000;
         text-align: center;
     }
 
@@ -261,7 +266,7 @@ footer a {
     }
 
     .site-title{
-        margin: 0px;
+        margin: 21px;
     }
 
 }
@@ -309,7 +314,7 @@ footer a {
         top: 80px;
         left: -100%;
         transition: all 0.5s;
-        background-color: #333;
+        background-color: #000000;
         text-align: center;
     }
 
@@ -370,7 +375,7 @@ main {
         top: 80px;
         left: -100%;
         transition: all 0.5s;
-        background-color: #333;
+        background-color: #000000;
         text-align: center;
     }
 
@@ -459,6 +464,18 @@ main {
     #check:checked~ul {
         display: block;
     }
+
+    .checkbtn {
+        display: block;
+    }
+    
+    .menu-icon {
+        margin-top: 10px;
+    }
+    
+    .close-icon {
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width: 280px) {
@@ -474,6 +491,18 @@ main {
 
     .checkbtn {
         margin-right: 10px;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+    
+    .menu-icon {
+        margin-top: 10px;
+    }
+    
+    .close-icon {
+        margin-top: 10px;
     }
 }
 
