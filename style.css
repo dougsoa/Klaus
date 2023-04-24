@@ -68,7 +68,6 @@ nav ul li a {
     text-decoration: none;
     line-height: 1em;
     padding: 1px 1px;
-    font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 nav ul li a:hover {
@@ -149,7 +148,6 @@ footer span {
 
 footer a {
     text-decoration: none;
-    font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 #top {
