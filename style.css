@@ -130,7 +130,7 @@ header img {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: black;
+    background-color: #333;
     color: white;
     border-radius: 50%;
     padding: 10px;
@@ -166,93 +166,93 @@ header img {
     text-decoration: underline;
 }
 
-    .content-wrapper {
-        display: flex;
-        flex-direction: row;
-        /* Alinha os itens na horizontal */
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 40px;
-    }
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    /* Alinha os itens na horizontal */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
 
-    .image-wrapper {
-        flex: 1;
-    }
+.image-wrapper {
+    flex: 1;
+}
 
-    #foto_perfil {
-        max-width: 100%;
-        border-radius: 20%;
-        height: auto;
-        display: block;
-    }
+#foto_perfil {
+    max-width: 100%;
+    border-radius: 20%;
+    height: auto;
+    display: block;
+}
 
-    .text-container {
-        flex: 1;
-        padding: 20px;
-        /* Adicione um preenchimento para tornar a caixa de texto quadrada */
-    }
+.text-container {
+    flex: 1;
+    padding: 20px;
+    /* Adicione um preenchimento para tornar a caixa de texto quadrada */
+}
 
-    .social-icons {
-        margin-top: 20px;
-        display: flex;
-        gap: 10px;
-    }
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
 
-    .social-icons a {
-        font-size: 24px;
-        color: #333;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
+.social-icons a {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-    .social-icons a:hover {
-        color: #3ecece;
-    }
+.social-icons a:hover {
+    color: #3ecece;
+}
 
-    /* PÁGINA CONTATO */
+/* PÁGINA CONTATO */
 
-    .content-wrapper {
-        display: flex;
-        flex-direction: row;
-        /* Alinha os itens na horizontal */
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 40px;
-    }
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    /* Alinha os itens na horizontal */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
 
-    .image-wrapper {
-        flex: 1;
-    }
+.image-wrapper {
+    flex: 1;
+}
 
-    #foto_perfil {
-        max-width: 100%;
-        border-radius: 20%;
-        height: auto;
-        display: block;
-    }
+#foto_perfil {
+    max-width: 100%;
+    border-radius: 20%;
+    height: auto;
+    display: block;
+}
 
-    .text-container {
-        flex: 1;
-        padding: 20px;
-        /* Adicione um preenchimento para tornar a caixa de texto quadrada */
-    }
+.text-container {
+    flex: 1;
+    padding: 20px;
+    /* Adicione um preenchimento para tornar a caixa de texto quadrada */
+}
 
-    .social-icons {
-        margin-top: 20px;
-        display: flex;
-        gap: 10px;
-    }
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
 
-    .social-icons a {
-        font-size: 24px;
-        color: #333;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
+.social-icons a {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-    .social-icons a:hover {
-        color: #3ecece;
-    }
+.social-icons a:hover {
+    color: #3ecece;
+}
 
 @media screen and (max-width: 768px) {
 
@@ -322,6 +322,8 @@ header img {
         display: flex;
         flex-direction: column;
         align-items: center;
+        top: 0px;
+        height: 100%;
     }
 
     ul li {
@@ -331,6 +333,10 @@ header img {
 
     ul li a {
         color: white;
+    }
+
+    li {
+        left: 900px;
     }
 
     @media screen and (max-width: 360px) {
@@ -378,17 +384,6 @@ header img {
         .social-icons a {
             font-size: 20px;
         }
-    }
-
-
-    /* Adjust your styles for screens up to 480px wide */
-    .site-title {
-        font-size: 48px;
-        left: 240px;
-    }
-
-    #top {
-        margin-bottom: 30px;
     }
 
 }
