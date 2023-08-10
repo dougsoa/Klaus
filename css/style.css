@@ -152,7 +152,8 @@ header img {
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
-    z-index: 999; /* Certifique-se de que o footer-bar fique acima do conteúdo */
+    z-index: 999;
+    /* Certifique-se de que o footer-bar fique acima do conteúdo */
 }
 
 .footer-bar a {
@@ -164,6 +165,94 @@ header img {
 .footer-bar a:hover {
     text-decoration: underline;
 }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        /* Alinha os itens na horizontal */
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .image-wrapper {
+        flex: 1;
+    }
+
+    #foto_perfil {
+        max-width: 100%;
+        border-radius: 20%;
+        height: auto;
+        display: block;
+    }
+
+    .text-container {
+        flex: 1;
+        padding: 20px;
+        /* Adicione um preenchimento para tornar a caixa de texto quadrada */
+    }
+
+    .social-icons {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #3ecece;
+    }
+
+    /* PÁGINA CONTATO */
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        /* Alinha os itens na horizontal */
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .image-wrapper {
+        flex: 1;
+    }
+
+    #foto_perfil {
+        max-width: 100%;
+        border-radius: 20%;
+        height: auto;
+        display: block;
+    }
+
+    .text-container {
+        flex: 1;
+        padding: 20px;
+        /* Adicione um preenchimento para tornar a caixa de texto quadrada */
+    }
+
+    .social-icons {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #3ecece;
+    }
 
 @media screen and (max-width: 768px) {
 
@@ -244,6 +333,54 @@ header img {
         color: white;
     }
 
+    @media screen and (max-width: 360px) {
+        body {
+            font-size: 14px;
+            padding-bottom: 20px;
+        }
+
+        .menu-icon {
+            padding: 3px;
+            margin: 5px;
+        }
+
+        .icon-bar {
+            width: 20px;
+        }
+
+        .container {
+            font-size: 14px;
+            max-width: 100%;
+            padding: 10px;
+        }
+
+        .site-title {
+            font-size: 36px;
+            top: 30%;
+            left: 50%;
+            line-height: 50px;
+        }
+
+        ul {
+            font-size: medium;
+        }
+
+        li a {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .footer-bar {
+            font-size: 10px;
+            padding: 5px 0;
+        }
+
+        .social-icons a {
+            font-size: 20px;
+        }
+    }
+
+
     /* Adjust your styles for screens up to 480px wide */
     .site-title {
         font-size: 48px;
@@ -253,47 +390,5 @@ header img {
     #top {
         margin-bottom: 30px;
     }
-}
 
-
-
-.content-wrapper {
-    display: flex;
-    flex-direction: row; /* Alinha os itens na horizontal */
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-
-.image-wrapper {
-    flex: 1;
-}
-
-#foto_perfil {
-    max-width: 100%;
-    border-radius: 20%;
-    height: auto;
-    display: block;
-}
-
-.text-container {
-    flex: 1;
-    padding: 20px; /* Adicione um preenchimento para tornar a caixa de texto quadrada */
-}
-
-.social-icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.social-icons a {
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #3ecece;
 }
