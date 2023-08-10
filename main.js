@@ -46,3 +46,9 @@ function index() {
   function contato() {
     window.location = "contato.html" ;
   }
+
+
+  function toggleMenu() {
+    const menu = document.querySelector('ul');
+    menu.classList.toggle('active');
+}
