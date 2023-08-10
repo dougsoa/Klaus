@@ -1,54 +1,58 @@
-const menu = document.querySelector('#menu');
-
-function activeScroll(){
-    menu.classList.toggle('ativo', scrollY > 815);
+// Função para ativar/desativar classe 'ativo' no menu baseado no scroll
+function handleScroll() {
+  const menu = document.querySelector('#menu');
+  menu.classList.toggle('ativo', window.scrollY > 815);
 }
 
-window.addEventListener('scroll', activeScroll);
+// Adicionar evento de scroll para atualizar o menu
+window.addEventListener('scroll', handleScroll);
 
-// fazer o botão Up ir ao topo 
-const btn = document.getElementById("top")
+// Botão para voltar ao topo
+const btnTop = document.getElementById("top");
 
-btn.addEventListener("click", function() {
-  window.scrollTo(0,0)
-})
+btnTop.addEventListener("click", function() {
+  window.scrollTo(0, 0);
+});
 
-// função para o botão Up desaparecer no topo
-document.addEventListener('scroll', ocultar)
+// Função para ocultar botão de voltar ao topo quando o scroll é pequeno
+function toggleTopButtonVisibility() {
+  const scrollThreshold = 250;
+  btnTop.style.display = window.scrollY > scrollThreshold ? "flex" : "none";
+}
 
-function ocultar() {
-  if(window.scrollY > 250) {
-    btn.style.display = "flex"
-  } else {
-    btn.style.display = "none"
+// Adicionar evento de scroll para ocultar botão de voltar ao topo
+document.addEventListener('scroll', toggleTopButtonVisibility);
+toggleTopButtonVisibility(); // Chamar a função para configurar o estado inicial
+
+// Mapeamento de páginas para seus respectivos caminhos
+const pageMapping = {
+  index: "index.html",
+  projetos: "projetos.html",
+  galeria: "galeria.html",
+  loja: "loja.html",
+  contato: "contato.html"
+};
+
+// Função para redirecionar para páginas
+function navigateToPage(pageName) {
+  const path = pageMapping[pageName];
+  if (path) {
+      window.location = path;
   }
 }
- ocultar()
 
+// Adicionar eventos de clique para os botões do menu
+const menuButtons = document.querySelectorAll('li a');
 
-// FUNÇÃO PARA QUE O ONCLICK ADD AOS BOTÕES DO MENU DIRECIONEM PARA SEUS RESPECTIVOS CAMINHOS
-function index() {
-    window.location = "index.html" ;
-  }
-  
-  function projetos() {
-    window.location = "projetos.html" ;
-  }
-  
-  function galeria() {
-    window.location = "galeria.html" ;
-  }
-    
-  function loja() {
-    window.location = "loja.html" ;
-  }
-    
-  function contato() {
-    window.location = "contato.html" ;
-  }
+menuButtons.forEach(button => {
+  button.addEventListener('click', function() {
+      const pageName = this.dataset.page;
+      navigateToPage(pageName);
+  });
+});
 
-
-  function toggleMenu() {
-    const menu = document.querySelector('ul');
-    menu.classList.toggle('active');
+// Função para mostrar/ocultar menu responsivo
+function toggleMenu() {
+  const menu = document.querySelector('ul');
+  menu.classList.toggle('active');
 }

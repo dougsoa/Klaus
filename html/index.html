@@ -2,11 +2,11 @@
 <html lang="pt-br">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="description" content="Site voltado a compras e encomendas de Amigurumi">
     <meta name="author" content="Cindy Anne Klausberguer Ximenes">
-    <meta name="Keywords" content="Amigurumi, amigurumi, Compras, Encomendas, Crochê, Croche, croche, crochê,">
+    <meta name="keywords" content="Amigurumi, Compras, Encomendas, Crochê">
     <meta name="robots" content="index, no follow">
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Klaus Art</title>
@@ -16,27 +16,27 @@
 
 <body>
     <header>
-        
         <button id="menu-icon" class="menu-icon" onclick="toggleMenu()">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-
+        
         <div class="menu-container">
             <nav id="menu">
-                <ul>
-                    <li><a onclick="index()"> Home </a></li>
-                    <li><a onclick="projetos()"> Projetos </a></li>
-                    <li><a onclick="galeria()"> Galeria </a></li>
-                    <li><a onclick="loja()"> Loja </a></li>
-                    <li><a onclick="contato()"> Contato </a></li>
+                <ul class="menu-list">
+                    <li><a data-page="index"> Home </a></li>
+                    <li><a data-page="projetos"> Projetos </a></li>
+                    <li><a data-page="galeria"> Galeria </a></li>
+                    <li><a data-page="loja"> Loja </a></li>
+                    <li><a data-page="contato"> Contato </a></li>
                 </ul>
             </nav>
         </div>
+        
         <div class="image-container">
             <img src="../imagens/home/party2.jpg" alt="estilo">
-            <label class="site-title">Klaus Festas.</label>
+            <h1 class="site-title">Klaus Festas.</h1>
         </div>
     </header>
 
@@ -80,19 +80,15 @@
         </main>
     </div>
 
-    <section>
-        <footer class="footer-bar">
-            Desenvolvido por <a href="https://github.com/dougsoa" target="_blank"><span>Douglas S. Oliveira</span></a> -
-            2023. Todos os direitos reservados
-        </footer>
-    </section>
+    <footer class="footer-bar">
+        Desenvolvido por <a href="https://github.com/dougsoa" target="_blank">Douglas S. Oliveira</a> - 2023. Todos os direitos reservados
+    </footer>
 
-    <div id="top">
+    <div id="top" onclick="scrollToTop()">
         <i class="arrow up">Up</i>
     </div>
 
+    <script src="../main.js"></script>
 </body>
-
-<script src="../main.js"></script>
 
 </html>
