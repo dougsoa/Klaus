@@ -24,23 +24,6 @@ function toggleTopButtonVisibility() {
 document.addEventListener('scroll', toggleTopButtonVisibility);
 toggleTopButtonVisibility(); // Chamar a função para configurar o estado inicial
 
-// Mapeamento de páginas para seus respectivos caminhos
-const pageMapping = {
-  index: "index.html",
-  projetos: "projetos.html",
-  galeria: "galeria.html",
-  loja: "loja.html",
-  contato: "contato.html"
-};
-
-// Função para redirecionar para páginas
-function navigateToPage(pageName) {
-  const path = pageMapping[pageName];
-  if (path) {
-      window.location = path;
-  }
-}
-
 // Adicionar eventos de clique para os botões do menu
 const menuButtons = document.querySelectorAll('li a');
 

@@ -1,5 +1,5 @@
 * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -42,14 +42,11 @@ body {
 }
 
 .menu-container {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
     background-color: transparent;
     z-index: 2;
-    /* Place the menu above other content */
 }
 
 ul {
@@ -99,7 +96,8 @@ header {
 }
 
 .image-container {
-    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 header img {
@@ -109,21 +107,35 @@ header img {
     background-color: transparent;
 }
 
-.site-title {
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.title-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.title-container .site-title {
     color: #00f5f5;
     font-family: 'norican';
-    font-size: 105px;
-    line-height: 80px;
-    padding: 0 20px;
+    font-size: 7vw;
+    padding: 0 2%;
     font-weight: bolder;
     text-decoration: none;
-    list-style: none;
-    text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
-    cursor: pointer;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.8);
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+article p,
+h2 {
+    text-align: justify;
 }
 
 #top {
@@ -133,9 +145,12 @@ header img {
     background-color: #333;
     color: white;
     border-radius: 50%;
-    padding: 10px;
+    padding: 1vw;
+    /* Tamanho responsivo para o padding */
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 1.5vw;
+    /* Tamanho responsivo para a margem */
+    z-index: 999;
 }
 
 #top:hover {
@@ -209,59 +224,20 @@ header img {
     color: #3ecece;
 }
 
-/* PÁGINA CONTATO */
-
-.content-wrapper {
-    display: flex;
-    flex-direction: row;
-    /* Alinha os itens na horizontal */
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-
-.image-wrapper {
-    flex: 1;
-}
-
-#foto_perfil {
-    max-width: 100%;
-    border-radius: 20%;
-    height: auto;
-    display: block;
-}
-
-.text-container {
-    flex: 1;
-    padding: 20px;
-    /* Adicione um preenchimento para tornar a caixa de texto quadrada */
-}
-
-.social-icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.social-icons a {
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #3ecece;
-}
-
 @media screen and (max-width: 768px) {
 
     /* Adjust your styles for screens up to 768px wide */
+
+    .title-container .site-title {
+        font-size: 8vw;
+        /* Tamanho responsivo para telas menores */
+    }
+
     .menu-container {
         position: static;
         background-color: #00000000;
-        /* padding: 10px 0; */
-
+        display: flex;
+        justify-content: center;
         padding: 0px;
         margin: 0px;
         list-style: none;
@@ -291,7 +267,10 @@ header img {
     }
 
     #top {
-        margin-bottom: 15px;
+        padding: 3vw;
+        /* Tamanho responsivo para iPads e tablets */
+        margin-bottom: 3vw;
+        /* Tamanho responsivo para iPads e tablets */
     }
 
     .footer-bar {
@@ -339,6 +318,13 @@ header img {
         left: 900px;
     }
 
+    #top {
+        padding: 2vw;
+        /* Tamanho responsivo para dispositivos móveis */
+        margin-bottom: 2vw;
+        /* Tamanho responsivo para dispositivos móveis */
+    }
+
     @media screen and (max-width: 360px) {
         body {
             font-size: 14px;
@@ -384,6 +370,82 @@ header img {
         .social-icons a {
             font-size: 20px;
         }
+
+        #top{
+            margin-bottom: 15px;
+        }
+    }
+
+    /* iPads e tablets: 481px - 768px */
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        .title-container .site-title {
+            font-size: 9vw;
+            /* Tamanho responsivo para iPads e tablets */
+            top: 35%;
+            /* Ajuste de posição */
+        }
+
+        #top {
+            padding: 1.5vw;
+            /* Tamanho responsivo para iPads e tablets */
+            margin-bottom: 1.5vw;
+            /* Tamanho responsivo para iPads e tablets */
+        }
+
+    }
+
+    /* Telas pequenas e laptops: 769px - 1024px */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .title-container .site-title {
+            font-size: 6vw;
+            /* Tamanho responsivo para telas pequenas e laptops */
+            top: 30%;
+            /* Ajuste de posição */
+        }
+
+        #top {
+            padding: 1vw;
+            /* Tamanho responsivo para telas pequenas e laptops */
+            margin-bottom: 1vw;
+            /* Tamanho responsivo para telas pequenas e laptops */
+        }
+    }
+
+    /* Desktops e telas grandes: 1025px - 1200px */
+    @media screen and (min-width: 1025px) and (max-width: 1200px) {
+        .title-container .site-title {
+            font-size: 4vw;
+            /* Tamanho responsivo para desktops e telas grandes */
+            top: 25%;
+            /* Ajuste de posição */
+        }
+
+        #top {
+            padding: 0.5vw;
+            /* Tamanho responsivo para desktops e telas grandes */
+            margin-bottom: 0.5vw;
+            /* Tamanho responsivo para desktops e telas grandes */
+        }
+
+        /* Outros ajustes de estilo para desktops e telas grandes */
+    }
+
+    /* Telas muito grandes e TVs: 1201px e acima */
+    @media screen and (min-width: 1201px) {
+        .title-container .site-title {
+            font-size: 3vw;
+            /* Tamanho responsivo para telas muito grandes e TVs */
+            top: 20%;
+            /* Ajuste de posição */
+        }
+
+        #top {
+            padding: 0.3vw;
+            /* Tamanho responsivo para telas muito grandes e TVs */
+            margin-bottom: 0.3vw;
+            /* Tamanho responsivo para telas muito grandes e TVs */
+        }
+
     }
 
 }
